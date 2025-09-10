@@ -5,13 +5,11 @@ pipeline {
         stage('clone') {
             steps {
                 git branch: 'main', credentialsId: '7f6d41a3-b396-44d9-ad30-69cc86d8d3f2', url: 'https://github.com/Gaurangi5/Java.git'
-            }
-    stages {
+            }}
         stage('compile') {
             steps {
                 bat 'javac hello.java'
-            }
-    stages {
+            }}
         stage('run') {
             steps {
                 bat 'java hello'
