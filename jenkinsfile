@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('clone') {
+            steps {
+                echo 'Hello World'
+            }
+    stages {
+        stage('compile') {
+            steps {
+                bat 'javac hello.java'
+            }
+    stages {
+        stage('run') {
+            steps {
+                bat 'java hello'
+            }
+        }
+    }
+}
